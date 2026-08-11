@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <link rel="icon" type="image/png" href="profilkep.png">
     <meta property="og:title" content="Szlezák Tamás - Személyes weboldal">
     <meta property="meta" content="Gépgazda, Tech, Linux & Kertészet kedvelő">
     <meta property="og:image" content="profilkep.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szlezák Tamás | Profil</title>
+    <title>Kezdőlap</title>
     <style>
         body {
         padding-top: 20px;
@@ -73,7 +72,7 @@
             background-color: var(--input-bg);
             border: 1px solid var(--card-border);
             border-radius: 20px;
-            padding: 8px 16px;
+            padding: 8px 10px;
             color: var(--text-muted);
             font-size: 0.9rem;
             width: 200px;
@@ -404,14 +403,7 @@
 
     <div class="container">
         
-        <!-- Profil Fejléc -->
-        <div class="profile-header">
-<img src="header.png" style="display: block; margin-bottom: 0px;">
-            <div class="profile-tabs">
-                <a href="index.html" class="tab active">Kezdőlap</a>
-                <a href="hasznos.html" class="tab active">Hasznos</a>
-            </div>
-        </div>
+
 
         <!-- Fő tartalom: 2 Oszlop -->
         <div class="profile-content">
@@ -421,42 +413,69 @@
                 
                 <div class="card">
                     <div class="card-title">
-                        <span>Névjegy</span>
+                        <span>Kezdőlap</span><div class="social-links"><a href="index.html" class="social-chip">1</a><a href="index2.html" class="social-chip">2</a></div>
                     </div>
-                    <div class="post-header">
-                        <img src="profilkep.png" alt="Avatar" class="small-avatar" style="object-fit: cover;">
-                        <div>
-                            <div class="post-author">Szlezák Tamás</div>
-                            <div class="post-time">Gépgazda</div>
-                            <div class="post-time">Tech, Linux & Kertészet kedvelő</div>
-                        </div>
-                    </div>
-
-                    <ul class="intro-list">
-                        <li class="intro-item">
-                            <p>Üdvözöllek az oldalamon! <b>Szlezák Tamás</b> vagyok. A mindennapokban <b>gépgazdaként</b> dolgozom, ahol a pontosság és a megbízhatóság a legfontosabb számomra. Szabadidőmben szívesen foglalkozom technológiával, számítógépek telepítésével és összeszerelésével. A <b>Linux</b> világával még <b>2004-ben</b> ismerkedtem meg; kezdetben Ubuntu-t használtam, majd több disztribúció kipróbálása után végül a <b>Debian</b> mellett köteleztem el magam. Autodidakta módon alap szintű <b>HTML weboldalkészítést</b> is tanultam. A technológia mellett a <b>kertészkedés</b> kapcsol ki igazán, különösen a különlegesebb növények nevelése. Szeretem a <b>jól szervezett, tiszta dolgokat</b> az élet minden területén.</p>
+             <div class="search-bar">
+             <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+             <input autocomplete="on" class="form-control search" name="q" placeholder="Google Keresés" required="required"  type="text">
+             </form>
+             </div>
+             <div class="search-bar">
+             <form action="https://duckduckgo.com/search" class="searchform" method="get" name="searchform" target="_blank">
+             <input autocomplete="on" class="form-control search" name="q" placeholder="DuckDuckGo Keresés" required="required"  type="text">
+             </form>
+             </div>
                 </div>
-
                 <div class="card">
-                    <div class="card-title">
-                        <span>Elérhetőségek</span>
+                    <div class="post-title">
+                        <span>Fiókok</span>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/tamsszle" target="_blank" class="social-chip">Facebook</a>
-                        <a href="https://www.instagram.com/tamsszle" target="_blank" class="social-chip">Instagram</a>
-                        <a href="https://www.threads.com/@tamsszle" target="_blank" class="social-chip">Threads</a>
-                        <a href="https://www.tiktok.com/@tazsleyer" target="_blank" class="social-chip">TikTok</a>
-                        <a href="mailto:tamas.szlezak@gmail.com" class="social-chip">E-mail</a>
+                        <a href="https://myaccount.google.com" target="_blank" class="social-chip">Google</a>
+                        <a href="https://account.microsoft.com" target="_blank" class="social-chip">Microsoft</a>
+                        <a href="https://account.samsung.com" target="_blank" class="social-chip">Samsung</a>
+                        <a href="https://account.apple.com" target="_blank" class="social-chip">Apple</a>
                     </div>
                 </div>
-
                 <div class="card">
-                    <div class="card-title">
-                        <span>Szakmai erősségek</span>
+                    <div class="post-title">
+                        <span>Közösségi</span>
                     </div>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">
-                        Windows, Linux, MS Office, Libreoffice
-                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" target="_blank" class="social-chip">Facebook</a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-chip">Instagram</a>
+                        <a href="https://www.threads.com" target="_blank" class="social-chip">Threads</a>
+                        <a href="https://www.facebook.com/messages" target="_blank" class="social-chip">Messenger</a>
+                        <a href="https://web.whatsapp.com" target="_blank" class="social-chip">Whatsapp</a>
+                        <a href="https://www.tiktok.com" target="_blank" class="social-chip">TikTok</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Mail</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://mail.google.com" target="_blank" class="social-chip">Gmail</a>
+                        <a href="https://outlook.live.com" target="_blank" class="social-chip">Outlook</a>
+                        <a href="https://www.icloud.com/mail" target="_blank" class="social-chip">iCloud</a>
+                        <a href="https://app.tuta.com" target="_blank" class="social-chip">Tuta</a>
+                        <a href="https://mail.proton.me" target="_blank" class="social-chip">Proton</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Munka</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://ringo.gedeonrichter.com" target="_blank" class="social-chip">RinGO</a>
+                        <a href="https://outlook.office.com.mcas.ms/mail" target="_blank" class="social-chip">Mail</a>
+                        <a href="https://performancemanager.successfactors.eu/sf/start" target="_blank" class="social-chip">SuccessFactors</a>
+                        <a href="https://gedeon.lightning.force.com/lightning/n/TMS_Dashboards" target="_blank" class="social-chip">TMS Dashboards</a>
+                        <a href="https://password.rgk.corp" target="_blank" class="social-chip">rgk\szlezakt</a>
+                        <a href="https://barcode.tec-it.com/en/QRCode?data=felhaszn%C3%A1l%C3%B3n%C3%A9v%5Ctjelsz%C3%B3" target="_blank" class="social-chip">QR Code</a>
+                        <a href="http://vdsz.hu" target="_blank" class="social-chip">VDSZ</a>
+                        <a href="http://10.172.159.10/PET" target="_blank" class="social-chip">Octavic</a>
+                    </div>
                 </div>
 
             </div>
@@ -465,90 +484,99 @@
             <div class="right-column">
 
                 <!-- 1. Poszt: Bemutatkozás -->
-                <div class="post">
-                    <div class="post-header">
-                        <div>
-                            <div class="post-author">Önéletrajz</div>
-                        </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Google</span>
                     </div>
-                    <div class="post-badge">Szakmai tapasztalat</div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-date">2023.10. - jelenleg is</div>
-                            <div class="timeline-role">Gépgazda</div>
-                            <div class="timeline-company">Richter Gedeon Nyrt.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2018.11. - 2023.10.</div>
-                            <div class="timeline-role">Csoportvezető</div>
-                            <div class="timeline-company">Richter Gedeon Nyrt.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2017.11. - 2018.11.</div>
-                            <div class="timeline-role">Operátor</div>
-                            <div class="timeline-company">Richter Gedeon Nyrt.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2016.08. - 2017.11.</div>
-                            <div class="timeline-role">Operátor</div>
-                            <div class="timeline-company">Humán Centrum Kft.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2015.08. - 2016.08.</div>
-                            <div class="timeline-role">Operátor</div>
-                            <div class="timeline-company">AM PET Kft.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2014.08. - 2015.08.</div>
-                            <div class="timeline-role">Érme értékkezelő</div>
-                            <div class="timeline-company">G4S Készpénzlogisztikai Kft.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2010.01. - 2014.08.</div>
-                            <div class="timeline-role">Operátor</div>
-                            <div class="timeline-company">ACHILLEUS WORK Kft.</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-date">2009.11. - 2010.01.</div>
-                            <div class="timeline-role">Érme értéktáros</div>
-                            <div class="timeline-company">G4S Készpénzlogisztikai Kft.</div>
-                        </div>
-
-                    <div class="post-badge">Nyelvismeret</div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-role">Angol</div>
-                        </div>
-
-                    <div class="post-badge">Képzettség</div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-date">2009.09.</div>
-                            <div class="timeline-role">Érettségi</div>
-                            <div class="timeline-company">Újpesti Két Tanítási Nyelvű Műszaki Szakközépiskola, Szakiskola és Gimnázium</div>
-                        </div>
-
+                    <div class="social-links">
+                        <a href="https://drive.google.com" target="_blank" class="social-chip">Drive</a>
+                        <a href="https://photos.google.com" target="_blank" class="social-chip">Fotók</a>
+                        <a href="https://contacts.google.com" target="_blank" class="social-chip">Névjegyek</a>
+                        <a href="https://keep.google.com" target="_blank" class="social-chip">Jegyzetek</a>
+                        <a href="https://translate.google.com" target="_blank" class="social-chip">Fordító</a>
+                        <a href="https://gemini.google.com" target="_blank" class="social-chip">Gemini</a>
+                        <a href="https://www.google.com/android/find" target="_blank" class="social-chip">Telefon keresése</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Eszközök</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vault.bitwarden.com" target="_blank" class="social-chip">Bitwarden</a>
+                        <a href="https://www.icloud.com" target="_blank" class="social-chip">iCloud</a>
+                        <a href="https://my.pcloud.com" target="_blank" class="social-chip">pCloud</a>
+                        <a href="http://192.168.64.1" target="_blank" class="social-chip">Router</a>
+                        <a href="https://github.com" target="_blank" class="social-chip">GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Pénzügyek és hivatalos</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.mbhbank.hu" target="_blank" class="social-chip">MBH</a>
+                        <a href="https://www.unicreditbank.hu" target="_blank" class="social-chip">UniCredit</a>
+                        <a href="https://www.revolut.com/hu-HU" target="_blank" class="social-chip">Revolut</a>
+                        <a href="https://wise.com" target="_blank" class="social-chip">Wise</a>
+                        <a href="https://magan.otpportalok.hu" target="_blank" class="social-chip">OTP Portálok</a>
+                        <a href="https://www.groupama.hu" target="_blank" class="social-chip">Groupama</a>
+                        <a href="https://simple.hu" target="_blank" class="social-chip">Simple</a>
+                        <a href="https://fiok.yettel.hu" target="_blank" class="social-chip">Yettel</a>
+                        <a href="https://www.one.hu/one-fiok" target="_blank" class="social-chip">One</a>
+                        <a href="https://onlineugyintezes.mvmnext.hu" target="_blank" class="social-chip">MVM Next</a>
+                        <a href="https://bacsviz.eforgalom.hu" target="_blank" class="social-chip">Bácsvíz</a>
+                        <a href="https://my.antiktv.hu" target="_blank" class="social-chip">Antikom</a>
+                        <a href="https://ugyfelkapu.gov.hu" target="_blank" class="social-chip">Ügyfélkapu</a>
+                        <a href="https://eszja.nav.gov.hu/app/login/#login" target="_blank" class="social-chip">eSZJA</a>
+                        <a href="https://ugyfelportal.nav.gov.hu" target="_blank" class="social-chip">NAV</a>
+                        <a href="https://netberlet.mininform.hu/szolnok/site/login" target="_blank" class="social-chip">Parkolás</a>
+                        <a href="https://www.eeszt.gov.hu/oldalvalaszto.jsp" target="_blank" class="social-chip">EESZT</a>
+                        <a href="https://portal.medicarebiztosito.hu" target="_blank" class="social-chip">MEDICARE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Szórakozás</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://webtv.tv/hu/tv" target="_blank" class="social-chip">TV</a>
+                        <a href="https://www.youtube.com" target="_blank" class="social-chip">YouTube</a>
+                        <a href="https://music.youtube.com" target="_blank" class="social-chip">YouTube Music</a>
+                        <a href="https://myonlineradio.hu" target="_blank" class="social-chip">Rádió</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Hírek és időjárás</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://kontroll.hu" target="_blank" class="social-chip">Kontroll</a>
+                        <a href="https://telex.hu" target="_blank" class="social-chip">Telex</a>
+                        <a href="https://24.hu" target="_blank" class="social-chip">24.hu</a>
+                        <a href="https://444.hu" target="_blank" class="social-chip">444.hu</a>
+                        <a href="https://hvg.hu" target="_blank" class="social-chip">HVG</a>
+                        <a href="https://www.idokep.hu/idojaras/Szolnok" target="_blank" class="social-chip">Időkép</a>
+                        <a href="https://www.met.hu" target="_blank" class="social-chip">HungaroMet</a>
+                        <a href="https://www.metnet.hu" target="_blank" class="social-chip">MetNet</a>
+                        <a href="https://www.sat24.com/hu-hu" target="_blank" class="social-chip">SAT24</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Hasznos</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.speedtest.net" target="_blank" class="social-chip">Speedtest</a>
+                        <a href="https://downdetector.hu" target="_blank" class="social-chip">Downdetector</a>
+                        <a href="https://www.mafab.hu" target="_blank" class="social-chip">Mafab</a>
+                        <a href="https://tok-shop.hu" target="_blank" class="social-chip">TokShop</a>
+                        <a href="https://www.eredetiajandekok.hu" target="_blank" class="social-chip">Eredeti Ajándékok</a>
+                        <a href="https://m3digital.hu" target="_blank" class="social-chip">M3 DIGITAL</a>
+                    </div>
                 </div>
 
-                <!-- 2. Poszt: Szakmai tapasztalatok (Idővonal) -->
-                <div class="post">
-                    <div class="post-header">
-                        <div>
-                            <div class="post-author">Portfólió</div>
-                            <div class="post-time"></div>
-                        </div>
-                    </div>
-                        <div class="post-badge">Weboldal</div>
-                        <div class="timeline-item">
-                            <div class="timeline-date"><a href="https://tamszl90.github.io/Homepage" target="_blank" rel="noopener noreferrer"><div class="timeline-date">Homepage</div></a></div>
-                            <div class="timeline-role">Család nyitólapja böngészőben</div>
-                        </div>
-                        <div class="post-badge">Weboldal</div>
-                        <div class="timeline-item">
-                            <div class="timeline-date"><a href="https://uteszjfe-jogvedelem.github.io/UTESZJFE-JOGVEDELEM" target="_blank" rel="noopener noreferrer"><div class="timeline-date">UTESZJFE-JOGVEDELEM</div></a></div>
-                            <div class="timeline-role">ÚESZJFE - Országos Jogvédő Kabinet</div>
-                        </div>
-                        </div>
+                </div>
 
                     </div>
 
@@ -559,7 +587,7 @@
         </div>
 
         <footer>
-            © 2026 Szlezák Tamás. Minden jog fenntartva.
+            <p>© 2026 created by <a href="https://tamszl90.github.io/tamsszle/">tamsszle</a></p>
         </footer>
 
     </div>
