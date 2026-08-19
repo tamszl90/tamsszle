@@ -497,8 +497,12 @@
                             <div class="timeline-role">TLP telepítése</div>
                             <div class="timeline-company">
 <p><b>A TLP automatikusan optimálja a fogyasztást:</b></p>
+<p><b>Telepítése:</b></p>
 <p>sudo apt update && sudo apt install tlp tlp-rdw</p>
-<p>sudo tlp start</p>
+<p><b>Engedélyezés és azonnali indítás:</b></p>
+<p>sudo systemctl enable --now tlp</p>
+<p><b>Működés ellenőrzése:</b></p>
+<p>sudo tlp-stat -s</p>
 </div>
                         </div>
                         <div class="post-badge">Debian</div>
