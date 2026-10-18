@@ -7,20 +7,18 @@
     <meta property="og:image" content="profilkep.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szlezák Tamás | Profil</title>
+    <title>TAMSSZLE</title>
     <style>
-        body {
-        padding-top: 20px;
-        }
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
             --card-border: #2e2e2e;
-            --accent-green: #2eccc0;
-            --accent-green-hover: #2e89cc;
+            --input-bg: #2a2a2a;
             --text-main: #e0e0e0;
             --text-muted: #a0a0a0;
-            --input-bg: #2a2a2a;
+            --accent-green: #2eccc0;
+            --accent-green-hover: #2e89cc;
+            --sidebar-width: 240px;
         }
 
         * {
@@ -35,211 +33,125 @@
             color: var(--text-main);
             line-height: 1.6;
             padding-bottom: 40px;
+            padding-top: 20px;
+            display: flex;
         }
 
-        /* Fejléc / Navigáció */
-        header {
-            position: sticky;
+        /* BAL OLDALI SÁV (SIDEBAR) */
+        .sidebar {
+            width: var(--sidebar-width);
+            background-color: var(--card-bg);
+            border-right: 1px solid var(--card-border);
+            position: fixed;
             top: 0;
-            z-index: 100;
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--card-border);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-badge {
-            background-color: var(--accent-green);
-            color: #121212;
-            font-weight: bold;
-            font-size: 1.2rem;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .search-bar {
-            background-color: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 8px 16px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            width: 200px;
-        }
-
-        .nav-icons {
-            display: flex;
-            gap: 15px;
-            color: var(--accent-green);
-            font-weight: bold;
-        }
-
-        /* Fő konténer */
-        .container {
-            max-width: 940px;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-
-        /* Borítókép és Profil szekció */
-        .profile-header {
-            background-color: var(--card-bg);
-            border-radius: 0 0 12px 12px;
-            border: 1px solid var(--card-border);
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-
-        .cover-photo {
-            height: 220px;
-            background: linear-gradient(135deg, #1e1e1e 0%, #0d2818 50%, #2ecc71 100%);
-            position: relative;
-        }
-
-        .profile-main-info {
-            padding: 0 20px 20px 20px;
-            position: relative;
+            bottom: 0;
+            left: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            padding: 20px 15px;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
             text-align: center;
-            margin-top: -80px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--card-border);
         }
 
-        .avatar-container {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--card-bg);
-            overflow: hidden;
-            background-color: #2a2a2a;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-        }
-
-        .avatar-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-name {
-            font-size: 1.8rem;
+        .sidebar-header h2 {
+            font-size: 1.2rem;
+            color: var(--text-main);
             font-weight: 700;
-            margin-top: 12px;
-            color: #ffffff;
+            letter-spacing: 1px;
         }
 
-        .profile-title {
-            color: var(--accent-green);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        .profile-bio {
-            max-width: 600px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        .action-buttons {
+        .sidebar-menu {
             display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 100%;
         }
 
-        .btn {
-            padding: 8px 18px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: background-color 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-green);
-            color: #121212;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-green-hover);
-        }
-
-        .btn-secondary {
+        .sidebar-link {
+            display: block;
+            text-align: center;
             background-color: var(--input-bg);
             color: var(--text-main);
             border: 1px solid var(--card-border);
-        }
-
-        .btn-secondary:hover {
-            background-color: #353535;
-        }
-
-        /* Tabok nav */
-        .profile-tabs {
-            display: flex;
-            border-top: 1px solid var(--card-border);
-            padding: 0 20px;
-            gap: 10px;
-            overflow-x: auto;
-        }
-
-        .tab {
-            padding: 12px 16px;
-            color: var(--text-muted);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
-            text-decoration: none;
-            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
         }
 
-        .tab.active {
-            color: var(--accent-green);
-            border-bottom-color: var(--accent-green);
+        .sidebar-link:hover, .sidebar-link.active {
+            background-color: var(--accent-green);
+            color: #121212;
+            border-color: var(--accent-green);
         }
 
-        /* 2-oszlopos elrendezés */
-        .profile-content {
-            display: grid;
-            grid-template-columns: 360px 1fr;
-            gap: 20px;
+        /* FŐ TARTALOM TERÜLETE */
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0 20px;
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
         }
 
         @media (max-width: 768px) {
-            .profile-content {
-                grid-template-columns: 1fr;
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--card-border);
+                margin-bottom: 20px;
+            }
+
+            .container {
+                margin-left: 0;
+                width: 100%;
+                padding: 0 10px;
             }
         }
 
-        /* Kártyák */
+        .profile-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .left-column {
+            width: 400px;
+            flex-shrink: 0;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 10px;
             padding: 16px;
-            margin-bottom: 20px;
+            width: 100%;
         }
 
-        .card-title {
+        .card-title, .post-title {
             font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 12px;
@@ -251,24 +163,36 @@
             align-items: center;
         }
 
-        .intro-list {
-            list-style: none;
-        }
-
-        .intro-item {
+        .post-header {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: var(--text-main);
         }
 
-        .intro-icon {
+        .small-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .post-author {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .post-time {
+            font-size: 0.85rem;
             color: var(--accent-green);
-            width: 20px;
-            text-align: center;
-            font-weight: bold;
+        }
+
+        .intro-list {
+            list-style: none;
+            font-size: 0.95rem;
+            color: var(--text-main);
         }
 
         .social-links {
@@ -285,87 +209,15 @@
             padding: 6px 12px;
             border-radius: 20px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 14px;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: border-color 0.2s;
+            transition: border-color 0.2s, color 0.2s;
         }
 
         .social-chip:hover {
             border-color: var(--accent-green);
-            color: var(--accent-green);
-        }
-
-        /* Posztok */
-
-        .small-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: #333;
-        }
-
-        .post-input {
-            flex: 1;
-            background-color: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 10px 16px;
-            color: var(--text-main);
-            font-size: 0.9rem;
-        }
-
-        .post {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-
-        .post-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .post-author {
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .post-time {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .post-body {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-            color: var(--text-main);
-        }
-
-        .post-badge {
-            display: inline-block;
-            background-color: #2e2e2e;
-            color: var(--accent-green);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .post-action {
-            cursor: pointer;
-            padding: 6px 12px;
-            border-radius: 4px;
-        }
-
-        .post-action:hover {
-            background-color: var(--input-bg);
             color: var(--accent-green);
         }
 
@@ -392,53 +244,77 @@
             font-size: 0.88rem;
         }
 
+        .post-badge {
+            display: inline-block;
+            background-color: #2e2e2e;
+            color: var(--accent-green);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.85rem;
             margin-top: 30px;
         }
+
+        footer a {
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- Profil Fejléc -->
-        <div class="profile-header">
-<img src="header.png" style="display: block; margin-bottom: 0px;">
-            <div class="profile-tabs">
-                <a href="index.html" class="tab active">Kezdőlap</a>
-                <a href="hasznos.html" class="tab active">Hasznos</a>
-                <a href="leirasok.html" class="tab active">Leírások</a>
-            </div>
+    <!-- BAL OLDALI SÁV -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>TAMSSZLE</h2>
         </div>
 
-        <!-- Fő tartalom: 2 Oszlop -->
+        <nav class="sidebar-menu">
+            <a href="index.html" class="sidebar-link">Kezdőlap</a>
+            <a href="hasznos.html" class="sidebar-link">Hasznos</a>
+            <a href="leirasok.html" class="sidebar-link active">Leírások</a>
+        </nav>
+
+        <div>
+        <footer>
+            © 2026 Szlezák Tamás. Minden jog fenntartva.
+        </footer>
+        </div>
+    </aside>
+
+    <!-- FŐ TARTALOM KONTÉNER -->
+    <div class="container">
         <div class="profile-content">
             
-            <!-- Bal oszlop: Névjegy & Infók -->
+            <!-- Bal oszlop: Névjegy, Elérhetőségek, Erősségek -->
             <div class="left-column">
                 
-                <div class="card">
+                <div class="card" style="margin-bottom: 20px;">
                     <div class="card-title">
                         <span>Névjegy</span>
                     </div>
                     <div class="post-header">
-                        <img src="profilkep.png" alt="Avatar" class="small-avatar" style="object-fit: cover;">
+                        <img src="profilkep.png" alt="Avatar" class="small-avatar">
                         <div>
                             <div class="post-author">Szlezák Tamás</div>
                             <div class="post-time">Gépgazda</div>
-                            <div class="post-time">Tech, Linux & Kertészet kedvelő</div>
+                            <div class="post-time" style="color: var(--text-muted);">Tech, Linux & Kertészet</div>
                         </div>
                     </div>
-
                     <ul class="intro-list">
-                        <li class="intro-item">
+                        <li>
                             <p>Üdvözöllek az oldalamon! <b>Szlezák Tamás</b> vagyok. A mindennapokban <b>gépgazdaként</b> dolgozom, ahol a pontosság és a megbízhatóság a legfontosabb számomra. Szabadidőmben szívesen foglalkozom technológiával, számítógépek telepítésével és összeszerelésével. A <b>Linux</b> világával még <b>2004-ben</b> ismerkedtem meg; kezdetben Ubuntu-t használtam, majd több disztribúció kipróbálása után végül a <b>Debian</b> mellett köteleztem el magam. Autodidakta módon alap szintű <b>HTML weboldalkészítést</b> is tanultam. A technológia mellett a <b>kertészkedés</b> kapcsol ki igazán, különösen a különlegesebb növények nevelése. Szeretem a <b>jól szervezett, tiszta dolgokat</b> az élet minden területén.</p>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="card">
+                <div class="card" style="margin-bottom: 20px;">
                     <div class="card-title">
                         <span>Elérhetőségek</span>
                     </div>
@@ -448,27 +324,26 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" style="margin-bottom: 20px;">
                     <div class="card-title">
                         <span>Szakmai erősségek</span>
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">
-                        Windows, Linux, MS Office, Libreoffice
+                        Windows, Linux, MS Office, LibreOffice
                     </p>
                 </div>
 
             </div>
 
-            <!-- Jobb oszlop: Hírfolyam / Posztok -->
+            <!-- Jobb oszlop: Tapasztalatok, Portfólió -->
             <div class="right-column">
 
-                <!-- 1. Poszt: Bemutatkozás -->
-                <div class="post">
-                    <div class="post-header">
-                        <div>
-                            <div class="post-author">Leírások</div>
-                        </div>
+                <div class="card">
+                    <div class="post-title">
+                        <span>Leírások</span>
                     </div>
+                    
+
                                             <div class="post-badge">Debian</div>
                         <div class="timeline-item">
                             <div class="timeline-date">MATE</div>
@@ -532,24 +407,11 @@
 <p>sudo apt update</p>
 <p>sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine winetricks</p></div>
                         </div>
-
-
-                </div>
-
-                
-
-                    </div>
-
                 </div>
 
             </div>
 
         </div>
-
-        <footer>
-            © 2026 Szlezák Tamás. Minden jog fenntartva.
-        </footer>
-
     </div>
 
 </body>
